@@ -4,7 +4,7 @@ public class AccountingApp {
 
 	public static void main(String[] args) {
 				
-		double valueOfSupply = 12345.0;
+		double valueOfSupply = Double.parseDouble(args[0]);
 		double vatRate = 0.1; // 부가 가치세
 		double expenseRate = 0.3;
 		double vat = valueOfSupply*vatRate;
