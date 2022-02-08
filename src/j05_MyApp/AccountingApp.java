@@ -14,7 +14,7 @@ public class AccountingApp {
 		double dividend1 = income * 0.5;
 		double dividend2 = income * 0.3;
 		double dividend3 = income * 0.2;
-		 
+		  
 		System.out.println("Value of supply : "+valueOfSupply); // 공급가			
 		System.out.println("VAT : "+vat); // 부가가치세		
 		System.out.println("Total : "+total);			
