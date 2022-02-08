@@ -15,7 +15,7 @@ public class AccountingIfApp {
 		double dividend1;
 		double dividend2;
 		double dividend3;
-		
+		 
 		if(income > 10000.0) {
 			dividend1 = income * 0.5;
 			dividend2 = income * 0.3;
