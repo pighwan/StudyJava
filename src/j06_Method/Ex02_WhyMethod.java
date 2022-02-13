@@ -1,17 +1,28 @@
 package j06_Method;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Ex02_WhyMethod {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
-		// 100000000
-		printTwoTimes("a", "-"); // "a", "-" : 얘네를 인자(argument)라 부름
-		// 100000000
-		printTwoTimes("a", "*");
-		// 100000000
-		printTwoTimes("a", "&");
-		printTwoTimes("b", "!");
+		System.out.println(twoTimes("a", "-"));
+		FileWriter fw = new FileWriter("out.txt");
+		fw.write(twoTimes("a", "*"));
+		fw.close();
+//		Email.send("egoing@a.com", "two times a", twoTimes("a", "&"));
+		
 	} // main
+	
+	public static String twoTimes(String text, String delimeter) {
+		String out = "";
+		out = out + delimeter + "\n";
+		out = out + text + "\n";
+		out = out + text + "\n";
+		return out;
+		
+	} // twoTimes
 
 	public static void printTwoTimes(String text, String delimiter) {
 		System.out.println(delimiter);
@@ -19,5 +30,12 @@ public class Ex02_WhyMethod {
 		System.out.println(text);
 	} // printTwoTimes
 
+	public static void writeFileTwoTimes(String text, String delimiter) throws IOException {
+		FileWriter fw = new FileWriter("output.txt");
+		fw.write(delimiter+"\n");
+		fw.write(text+"\n");
+		fw.write(text+"\n");
+		fw.close();
+	} // printTwoTimes
 	
 } // class
