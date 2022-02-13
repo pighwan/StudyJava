@@ -1,6 +1,6 @@
 package j06_Method;
 
-public class EX01_FirstMethod {
+public class Ex01_FirstMethod {
 
 	public static void main(String[] args) {
 		System.out.println("Hello Method");
