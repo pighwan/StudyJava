@@ -1,38 +1,35 @@
 package j07_ObjectOrientedProgramming;
 
 class Accounting {
-	public static double valueOfSupply; // 공급가액
+	public double valueOfSupply; // 공급가액
 	public static double vatRate = 0.1; // 부가가치세율
+	public Accounting(double valueOfSupply) {
+		this.valueOfSupply = valueOfSupply;
+	}
 	
-	public static double getVAT() {
+	public double getVAT() {	    // 부가 가치세
 		return valueOfSupply*vatRate;
 	}
 	
-	public static double getTotal() {
+	public double getTotal() {   // 합계
 		return valueOfSupply + getVAT();
 	}
 } // Accounting
 
 public class Ex07_AccountingApp {
 	
-	public static void main(String[] args) {				
-		Accounting.valueOfSupply = 10000.0;
-		double expenseRate = 0.3;	
-		double expense = Accounting.valueOfSupply*expenseRate;
-		double income = Accounting.valueOfSupply - expense;
-		double dividend1 = income * 0.5;
-		double dividend2 = income * 0.3;
-		double dividend3 = income * 0.2;
-		  
-		System.out.println("Value of supply : "+Accounting.valueOfSupply); // 공급가			
-		System.out.println("VAT : "+Accounting.getVAT()); // 부가가치세		
-		System.out.println("Total : "+Accounting.getTotal()); // 합계		
-		System.out.println("Expense : "+expense); 		
-		System.out.println("Income : "+income); // 전체 수익		
-		System.out.println("Dividend 1 : "+dividend1);		
-		System.out.println("Dividend 2 : "+dividend2);		
-		System.out.println("Dividend 3 : "+dividend3);
+	public static void main(String[] args) {	
+		Accounting a1 = new Accounting(10000.0);		
+		Accounting a2 = new Accounting(20000.0);		
 		
+		System.out.println("Value of supply : "+a1.valueOfSupply);
+		System.out.println("Value of supply : "+a2.valueOfSupply);
+		
+		System.out.println("VAT : "+a1.getVAT());
+		System.out.println("VAT : "+a2.getVAT());
+		
+		System.out.println("Total : "+a1.getTotal());
+		System.out.println("Total : "+a2.getTotal());		
 		 
 	} // main
 
