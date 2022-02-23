@@ -4,6 +4,10 @@ class Cal {
 	public int sum(int v1, int v2) {
 		return v1+v2;
 	} // sum
+	public int sum(int v1, int v2, int v3) {
+		return v1+v2+v3;
+	} // sum   -> Overloading(상속과는 굳이 상관 엄슴!)
+	
 } // Cal
 
 //class Cal2 { // Cal 클래스를 복사한 후 minus 기능을 추가 한 것. 
@@ -29,7 +33,8 @@ public class Ex01_InheritanceApp { // Inheritance : 상속 !
 
 	public static void main(String[] args) {
 		Cal c = new Cal();
-		System.out.println("인스턴스 c의 합계 => "+c.sum(2, 1));
+		System.out.println("인스턴스 c의 합계(v1,v2) => "+c.sum(2, 1));
+		System.out.println("인스턴스 c의 합계(v1,v2,v3) => "+c.sum(2, 1, 1));
 		
 		Cal3 c3 = new Cal3();
 		System.out.println("인스턴스 c3의 합계 => "+c3.sum(2, 1));		
