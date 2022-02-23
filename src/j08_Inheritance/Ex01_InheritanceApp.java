@@ -5,7 +5,7 @@ class Cal {
 		return v1+v2;
 	} // sum
 	public int sum(int v1, int v2, int v3) {
-		return v1+v2+v3;
+		return this.sum(v1, v2)+v3;
 	} // sum   -> Overloading(상속과는 굳이 상관 엄슴!)
 	
 } // Cal
@@ -25,7 +25,7 @@ class Cal3 extends Cal { // Cal 클래스를 상속받은 것
 	} // 부모가 갖고 있지 않은 메소드를 추가
 	public int sum(int v1, int v2) {
 		System.out.println("Cal3!!");
-		return v1+v2;
+		return super.sum(v1, v2);
 	} // 부모가 가지고 있는 메소드를 재정의(Overriding)
 } // Cal3
 
