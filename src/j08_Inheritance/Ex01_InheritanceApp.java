@@ -16,7 +16,13 @@ class Cal {
 //}
 
 class Cal3 extends Cal { // Cal 클래스를 상속받은 것
-	
+	public int minus(int v1, int v2) {
+		return v1-v2;
+	} // 부모가 갖고 있지 않은 메소드를 추가
+	public int sum(int v1, int v2) {
+		System.out.println("Cal3!!");
+		return v1+v2;
+	} // 부모가 가지고 있는 메소드를 재정의(Overriding)
 } // Cal3
 
 public class Ex01_InheritanceApp { // Inheritance : 상속 !
@@ -27,7 +33,8 @@ public class Ex01_InheritanceApp { // Inheritance : 상속 !
 		
 		Cal3 c3 = new Cal3();
 		System.out.println("인스턴스 c3의 합계 => "+c3.sum(2, 1));		
-	
+		System.out.println("인스턴스 c3의 차 => "+c3.minus(2, 1));
+		System.out.println("인스턴스 c3의 합계 => "+c3.sum(2, 1));	
 	} // main
 
 } // class
