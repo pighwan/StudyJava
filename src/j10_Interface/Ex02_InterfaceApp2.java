@@ -19,14 +19,21 @@ class RealCal2 implements Calculable2, Printable{
 	}
 }
 
+class AdvencedPrint implements Printable{
+	public void print() {
+		System.out.println("This is RealCal!!");		
+	}
+}
+
 public class Ex02_InterfaceApp2 {
 
 	public static void main(String[] args) {
 		// 더하기 기능이 있는 클래스를 만들어주세요~
-		RealCal2 c = new RealCal2();
-		System.out.println(c.sum(2, 1));
+		Printable c = new AdvencedPrint();
+		RealCal2 d = new RealCal2();
+		System.out.println(d.sum(2, 1));
 		c.print();
-		System.out.println(c.PI);
+		System.out.println(d.PI);
 	} // main
 
 } // class
